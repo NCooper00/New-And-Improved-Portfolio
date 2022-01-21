@@ -1,0 +1,13 @@
+:root {
+    --mainbg: #121212;
+    --softwhite: #EEE9E9;
+}
+
+html {
+    background-color: var(--mainbg);
+    scroll-behavior: smooth;
+
+}
+
+
+
