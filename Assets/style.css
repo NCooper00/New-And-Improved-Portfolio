@@ -1,12 +1,196 @@
 :root {
+    --darkbg: #090909;
     --mainbg: #121212;
     --softwhite: #EEE9E9;
+    --blueGlow: #097AEC;
+}
+
+.sr-only {
+    visibility: hidden;
 }
 
 html {
-    background-color: var(--mainbg);
+    background-color: var(--darkbg);
     scroll-behavior: smooth;
+    z-index: -9999;
+}
 
+body {
+    z-index: -10;
+}
+
+.mainHeader {
+    width: 100%;
+    height: 120px;
+    background-color: var(--mainbg);
+    display: flex;
+    position: fixed;
+    box-shadow: 25px 5px 5px #EEE9E9;
+    z-index: 2;
+}
+
+.nameHolder {
+    width: fit-content;
+    /* padding-left: 10px var(--mainbg);
+    padding-right: 10px var(--mainbg); */
+    height: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin-left: 40px;
+    box-shadow: -655px 10px 5px -5px var(--blueGlow);
+    transition: box-shadow 3s, margin-left 500ms;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.nameHolder[aria-expanded="true"] {
+    width: fit-content;
+    /* padding-left: 10px var(--mainbg);
+    padding-right: 10px var(--mainbg); */
+    height: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin-left: 200px;
+    box-shadow: -655px 10px 5px -5px var(--blueGlow);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.nameHolder:hover {
+    box-shadow: -6px 12px 5px -5px var(--blueGlow);
+}
+
+.name {
+    font-size: 85px;
+    font-weight: bold;
+    color: var(--softwhite);
+    cursor: pointer;
+    transition: text-shadow 800ms, color 800ms;
+    user-select: none;
+}
+
+.name:hover {
+    text-shadow: -5px 3px 0px var(--blueGlow);
+    color: white;
+}
+
+.nameHolder:hover .imageBox {
+    left: 195px;
+}
+
+.navButtonToggle {
+    top: 120px;
+    left: 5px;
+    width: 30px;
+    aspect-ratio: 1;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    background-color: transparent;
+    background-image: url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left, .right {
+    background-color: var(--mainbg);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.left {
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    box-shadow: 5px 122px 5px 0px #EEE9E9;
+    transition: transform 500ms, box-shadow 1s;
+}
+
+.left[data-visible="false"] {
+    transform: translate(-155px);
+}
+
+.left[data-visible="true"] {
+    box-shadow: 5px 121px 3px 0px var(--blueGlow);
+}
+
+.display[data-visible="false"] {
+    color: transparent;
+    transition: 100ms ease-out;
+ }
+
+ .display[data-visible="true"] {
+    transition: 200ms ease-out;
+    transition-delay: 300ms;
+}
+
+.contactMe {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    position: absolute;
+    bottom: 25px;
+    border-top: 5px var(--mainbg);
+    box-shadow: 0px 0px 5px -5px var(--blueGlow);
+    transition: box-shadow 500ms, transform 500ms;
+    cursor: pointer;
+    color: var(--softwhite);
+    font-weight: bold;
+    user-select: none;
+    background-color: transparent;
+}
+
+.contactMe:hover[data-visible="true"] {
+    box-shadow: 10px 4px 5px -5px var(--blueGlow), -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
+    transform: translate(3px, -5px);
+}
+
+.contactIconHolder {
+    position: absolute;
+    left: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 500ms, transform 500ms, left 500ms;
+    background-image: transparent;
+}
+
+.contactIcon {
+    background-image: url("https://cdn-icons.flaticon.com/png/128/542/premium/542689.png?token=exp=1642806967~hmac=4de846943ae4031abd3a0204626ac6f7");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    width: 30px;
+    aspect-ratio: 1;
+    transition: box-shadow 500ms, transform 500ms;
+}
+
+.contactMe[data-visible="false"] .contactIconHolder {
+    left: 78%;
+    width: 40px;
+}
+
+.contactMe:hover[data-visible="false"] .contactIconHolder {
+    box-shadow: -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
+    /* background-color: var(--blueGlow); */
+    transform: translate(3px, -5px);
+}
+
+
+.contactBox {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    /* background-color: var(--softwhite); */
+    z-index: -5;
 }
 
 

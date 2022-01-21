@@ -10,12 +10,45 @@
 </head>
 
 <header class="mainHeader">
+    <div class="nameHolder" aria-expanded="false">
+        <div class="name">Nick Cooper</div>
+
+    </div>
+
     
+
 </header>
+
+<button id="navBtnTgl" class="navButtonToggle" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="sr-only">Menu</span>
+</button>
+
+<nav class="left" data-visible="false" id="primary-navigation">
+    <ul class="navButtonSection">
+        
+        <li class="contactMe display" data-visible="false">
+            <div>Contact Me</div>
+            
+            <div class="contactIconHolder">
+                <div class="contactIcon" data-visible="true"></div>
+            </div>
+        </li>
+
+    </ul>
+</nav>
+
+<nav class="right"></nav>
 
 <body>
 
-    
+
+
+    <div class="contactBox">
+        <div class="email"></div>
+    </div>
+
 </body>
-<script src="assets/script.js"></script>
+
+
+<script src="./Assets/script.js"></script>
 </html>
