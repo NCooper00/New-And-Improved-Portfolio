@@ -19,12 +19,21 @@ body {
     z-index: -10;
 }
 
+.mainBodySection {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
 .mainHeader {
     width: 100%;
     height: 120px;
     background-color: var(--mainbg);
     display: flex;
-    position: fixed;
+    position: absolute;
+    top: 0;
     box-shadow: 25px 5px 5px #EEE9E9;
     z-index: 2;
 }
@@ -39,15 +48,13 @@ body {
     align-items: center;
     margin-left: 40px;
     box-shadow: -655px 10px 5px -5px var(--blueGlow);
-    transition: box-shadow 3s, margin-left 500ms;
+    transition: box-shadow 3s, margin-left 490ms;
     overflow: hidden;
     z-index: 2;
 }
 
 .nameHolder[aria-expanded="true"] {
     width: fit-content;
-    /* padding-left: 10px var(--mainbg);
-    padding-right: 10px var(--mainbg); */
     height: 100%;
     display: flex;
     float: left;
@@ -97,9 +104,9 @@ body {
 
 .left, .right {
     background-color: var(--mainbg);
-    position: absolute;
+    position: fixed;
     z-index: 2;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .left {
@@ -119,24 +126,35 @@ body {
     box-shadow: 5px 121px 3px 0px var(--blueGlow);
 }
 
+.navButtonSection {
+    /* padding: 175px 0em; */
+    padding: min(50vh, 20em) 0px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    /* margin-top: 150px; */
+    /* width: 100%; */
+    /* height: 1000px; */
+    justify-content: space-around;
+}
+
 .display[data-visible="false"] {
     color: transparent;
     transition: 100ms ease-out;
  }
 
- .display[data-visible="true"] {
+.display[data-visible="true"] {
     transition: 200ms ease-out;
     transition-delay: 300ms;
 }
 
-.contactMe {
+.display {
     width: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 50px;
-    position: absolute;
-    bottom: 25px;
+    /* position: absolute; */
     border-top: 5px var(--mainbg);
     box-shadow: 0px 0px 5px -5px var(--blueGlow);
     transition: box-shadow 500ms, transform 500ms;
@@ -145,14 +163,20 @@ body {
     font-weight: bold;
     user-select: none;
     background-color: transparent;
+    /* flex-direction: column; */
+    list-style: none;
 }
 
-.contactMe:hover[data-visible="true"] {
-    box-shadow: 10px 4px 5px -5px var(--blueGlow), -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
-    transform: translate(3px, -5px);
+.navIcon {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    width: 30px;
+    aspect-ratio: 1;
+    transition: box-shadow 500ms, transform 500ms;
 }
 
-.contactIconHolder {
+.navIconHolder {
     position: absolute;
     left: 7px;
     display: flex;
@@ -162,22 +186,32 @@ body {
     background-image: transparent;
 }
 
-.contactIcon {
-    background-image: url("https://cdn-icons.flaticon.com/png/128/542/premium/542689.png?token=exp=1642806967~hmac=4de846943ae4031abd3a0204626ac6f7");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-    width: 30px;
-    aspect-ratio: 1;
-    transition: box-shadow 500ms, transform 500ms;
+.display:hover[data-visible="true"] {
+    box-shadow: 10px 4px 5px -5px var(--blueGlow), -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
+    transform: translate(3px, -5px);
 }
 
-.contactMe[data-visible="false"] .contactIconHolder {
+.resumeIcon {
+    background-image: url("https://cdn-icons.flaticon.com/png/128/4212/premium/4212312.png?token=exp=1642813247~hmac=894fea53b8eae5943c82697918f2c69a");
+}
+
+.resume {
+    position: absolute;
+    left: 500px;
+    top: 500px;
+}
+
+.contactIcon {
+    background-image: url("https://cdn-icons.flaticon.com/png/128/542/premium/542689.png?token=exp=1642806967~hmac=4de846943ae4031abd3a0204626ac6f7");
+
+}
+
+.display[data-visible="false"] .navIconHolder {
     left: 78%;
     width: 40px;
 }
 
-.contactMe:hover[data-visible="false"] .contactIconHolder {
+.display:hover[data-visible="false"] .navIconHolder {
     box-shadow: -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
     /* background-color: var(--blueGlow); */
     transform: translate(3px, -5px);
