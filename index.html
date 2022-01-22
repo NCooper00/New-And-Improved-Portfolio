@@ -26,23 +26,76 @@
 <nav class="left" data-visible="false" id="primary-navigation">
     <ul class="navButtonSection">
         
-        <li class="myResume display" data-visible="false">
+        <button class="myResume display" data-visible="false" aria-expanded="false">
             <div>My Resume</div>
             
             <div class="resumeIconHolder navIconHolder">
                 <div class="resumeIcon navIcon" data-visible="true"></div>
             </div>
             
-        </li>
-        <iframe class="resume" src="https://www.dropbox.com/s/k0ond8t70j57fmf/Nick%2BCooper%2BResume%2B2021-2022.pdf?dl=0"></iframe>
+        </button>
+
+        <button class="placeholder display" data-visible="false" aria-expanded="false">
+            <div>Placeholder</div>
+            
+            <div class="placeholdernavIconHolder">
+                <div class="placeholdernavIcon" data-visible="true"></div>
+            </div>
+            
+        </button>
+
+        <button class="placeholder display" data-visible="false" aria-expanded="false">
+            <div>Placeholder</div>
+            
+            <div class="placeholdernavIconHolder">
+                <div class="placeholdernavIcon" data-visible="true"></div>
+            </div>
+            
+        </button>
+
+        <button class="placeholder display" data-visible="false" aria-expanded="false">
+            <div>Placeholder</div>
+            
+            <div class="placeholdernavIconHolder">
+                <div class="placeholdernavIcon" data-visible="true"></div>
+            </div>
+            
+        </button>
+
+        <button class="placeholder display" data-visible="false" aria-expanded="false">
+            <div>Placeholder</div>
+            
+            <div class="placeholdernavIconHolder">
+                <div class="placeholdernavIcon" data-visible="true"></div>
+            </div>
+            
+        </button>
+
+        <button class="placeholder display" data-visible="false" aria-expanded="false">
+            <div>Placeholder</div>
+            
+            <div class="placeholdernavIconHolder">
+                <div class="placeholdernavIcon" data-visible="true"></div>
+            </div>
+            
+        </button>
+
+        <button class="placeholder display" data-visible="false" aria-expanded="false">
+            <div>Placeholder</div>
+            
+            <div class="placeholdernavIconHolder">
+                <div class="placeholdernavIcon" data-visible="true"></div>
+            </div>
+            
+        </button>
         
-        <li class="contactMe display" data-visible="false">
+        <button class="contactMe display" data-visible="false" aria-expanded="false">
             <div>Contact Me</div>
             
             <div class="contactIconHolder navIconHolder">
                 <div class="contactIcon navIcon" data-visible="true"></div>
             </div>
-        </li>
+        </button>
 
     </ul>
 </nav>
@@ -51,7 +104,9 @@
 
 <body>
     <section class="mainBodySection">
-        
+        <div class="pdfHolder" data-visible="false" aria-controls="pdf-closed">
+            <embed class="resume" src="Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf" type="application/pdf" data-visible="false"></embed>
+        </div>
 
         <div class="contactBox">
             <div class="email"></div>

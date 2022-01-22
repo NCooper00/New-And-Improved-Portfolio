@@ -1,5 +1,7 @@
 :root {
     --darkbg: #090909;
+    --lightbg: #181818;
+    --lighterbg: #212121;
     --mainbg: #121212;
     --softwhite: #EEE9E9;
     --blueGlow: #097AEC;
@@ -128,14 +130,14 @@ body {
 
 .navButtonSection {
     /* padding: 175px 0em; */
-    padding: min(50vh, 20em) 0px;
+    padding: min(30vh, 10em) 0px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
     /* margin-top: 150px; */
     /* width: 100%; */
     /* height: 1000px; */
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .display[data-visible="false"] {
@@ -145,7 +147,11 @@ body {
 
 .display[data-visible="true"] {
     transition: 200ms ease-out;
-    transition-delay: 300ms;
+    transition-delay: 0ms;
+}
+
+.display:active {
+    transform: translateY(-2px);
 }
 
 .display {
@@ -157,7 +163,7 @@ body {
     /* position: absolute; */
     border-top: 5px var(--mainbg);
     box-shadow: 0px 0px 5px -5px var(--blueGlow);
-    transition: box-shadow 500ms, transform 500ms;
+    transition: box-shadow 500ms, transform 500ms, background-color 500ms, width 500ms;
     cursor: pointer;
     color: var(--softwhite);
     font-weight: bold;
@@ -165,6 +171,7 @@ body {
     background-color: transparent;
     /* flex-direction: column; */
     list-style: none;
+    border: none;
 }
 
 .navIcon {
@@ -177,7 +184,7 @@ body {
 }
 
 .navIconHolder {
-    position: absolute;
+    position: fixed;
     left: 7px;
     display: flex;
     align-items: center;
@@ -187,18 +194,62 @@ body {
 }
 
 .display:hover[data-visible="true"] {
-    box-shadow: 10px 4px 5px -5px var(--blueGlow), -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
+    box-shadow: 2px 4px 2px -2px var(--blueGlow), -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
     transform: translate(3px, -5px);
+    background-color: var(--lighterbg);
+    width: 196px;
+}
+
+.display[aria-expanded="true"] {
+    box-shadow: 2px 4px 2px -2px var(--blueGlow), -5px 5px 3px var(--blueGlow), -5px -1px 5px var(--darkbg);
+    transform: translate(3px, -5px);
+    background-color: var(--lightbg);
+    width: 196px;
+}
+
+.display[aria-expanded="false"] {
+    box-shadow: none;
+    transform: translate(0px, 0px);
 }
 
 .resumeIcon {
     background-image: url("https://cdn-icons.flaticon.com/png/128/4212/premium/4212312.png?token=exp=1642813247~hmac=894fea53b8eae5943c82697918f2c69a");
 }
 
-.resume {
+.pdfHolder {
     position: absolute;
-    left: 500px;
-    top: 500px;
+    opacity: 0;
+    left: -100%;
+    transition: left 500ms, opacity 500ms, transform 2s;
+}
+
+.pdfHolder[data-visible="true"] {
+    opacity: 100;
+}
+
+.pdfHolder[data-visible="false"] {
+    transform: translate(-100%);
+}
+
+.pdfHolder[aria-controls="pdf-closed"] {
+    left: 50px;
+}
+
+.pdfHolder[aria-controls="pdf-open"] {
+    left: 200px;
+}
+
+.resume {
+    width: 600px;
+    aspect-ratio: 0.75;
+    transition: width 500ms, box-shadow 3s;
+    transition-delay: width 0s, box-shadow 2s;
+}
+
+.resume[data-visible="true"] {
+    width: 600px;
+    aspect-ratio: 0.75;
+    box-shadow: 0px 0px 5px 5px var(--blueGlow);
 }
 
 .contactIcon {
@@ -207,7 +258,7 @@ body {
 }
 
 .display[data-visible="false"] .navIconHolder {
-    left: 78%;
+    left: 156px;
     width: 40px;
 }
 
