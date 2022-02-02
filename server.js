@@ -15,11 +15,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
-app.get('/assets/reset.css', (req, res) => {
+app.get('assets/reset.css', (req, res) => {
     res.sendFile(path.join(__dirname, '/assets/reset.css'));
 });
 
-app.get('/assets/style.css', (req, res) => {
+app.get('assets/style.css', (req, res) => {
     res.sendFile(path.join(__dirname, '/assets/style.css'));
 });
 
