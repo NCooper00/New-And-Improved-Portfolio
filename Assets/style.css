@@ -1,7 +1,3 @@
-* {
-    scroll-behavior: smooth;
-}
-
 :root {
     --darkbg: #090909;
     --lightbg: #181818;
@@ -9,6 +5,10 @@
     --mainbg: #121212;
     --softwhite: #EEE9E9;
     --blueGlow: #097AEC;
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 .sr-only {
