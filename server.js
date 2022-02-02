@@ -36,7 +36,7 @@ app.get('/script.js', (req, res) => {
 });
 
 app.get('/Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf', (req, res) => {
-    res.sendFile(path.join(__dirname, '/Extra-Tools/files/'));
+    res.sendFile(path.join(__dirname, '/Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf'));
 });
 
 
