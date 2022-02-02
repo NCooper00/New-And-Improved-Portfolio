@@ -1,0 +1,20 @@
+{
+  "name": "new-and-improved-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio to display my work",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NCooper00/New-And-Improved-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NCooper00/New-And-Improved-Portfolio/issues"
+  },
+  "homepage": "https://github.com/NCooper00/New-And-Improved-Portfolio#readme"
+}
