@@ -3,16 +3,13 @@ const path = require('path');
 const fs = require('fs');
 const notes = require('./db/db.json');
 const uuid = require('uuid');
-const PdfReader = require('pdfreader/PdfReader');
+const pdfreader = require('pdfreader');
 // const resume = require('./Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf');
 
-fs.readFile("/Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf", (err, pdfBuffer) => {
-    // pdfBuffer contains the file content
-    new PdfReader().parseBuffer(pdfBuffer, function (err, item) {
-      if (err) callback(err);
-      else if (!item) callback();
-      else if (item.text) console.log(item.text);
-    });
+new pdfreader.PdfReader().parseFileItems("./Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf", function (err, item) {
+    if (err) callback(err);
+    else if (!item) callback();
+    else if (item.text) console.log(item.text);
 });
 
 const app = express();
