@@ -266,7 +266,7 @@ body {
 }
 
 .resumeIcon {
-    background-image: url("https://cdn-icons.flaticon.com/png/128/4212/premium/4212312.png?token=exp=1642813247~hmac=894fea53b8eae5943c82697918f2c69a");
+    background-image: url("/photos/icons/resumeIcon.png");
 }
 
 .pdfHolder {
@@ -307,7 +307,7 @@ body {
 }
 
 .contactIcon {
-    background-image: url("https://cdn-icons.flaticon.com/png/128/542/premium/542689.png?token=exp=1642806967~hmac=4de846943ae4031abd3a0204626ac6f7");
+    background-image: url("/photos/icons/emailIcon.png");
 
 }
 
