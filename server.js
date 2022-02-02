@@ -3,14 +3,9 @@
 // const fs = require('fs');
 // const notes = require('./db/db.json');
 // const uuid = require('uuid');
-// const pdfreader = require('pdfreader');
 // // const resume = require('./Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf');
 
-// new pdfreader.PdfReader().parseFileItems("./Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf", function (err, item) {
-//     if (err) callback(err);
-//     else if (!item) callback();
-//     else if (item.text) console.log(item.text);
-// });
+
 
 // const app = express();
 // const PORT = process.env.PORT || 3001;
@@ -24,11 +19,11 @@
 // });
 
 // app.get('/assets/reset.css', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'assets/reset.css'));
+//     res.sendFile(path.join(__dirname, '/assets/reset.css'));
 // });
 
 // app.get('/assets/style.css', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'assets/style.css'));
+//     res.sendFile(path.join(__dirname, '/assets/style.css'));
 // });
 
 // app.get('/script.js', (req, res) => {
@@ -36,7 +31,7 @@
 // });
 
 // app.get('/Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf', (req, res) => {
-//     res.sendFile(path.join(__dirname, './Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf'));
+//     res.sendFile(path.join(__dirname, '/Extra-Tools/files/Nick+Cooper+Resume+2021-2022.pdf'));
 // });
 
 
