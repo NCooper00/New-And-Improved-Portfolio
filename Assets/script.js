@@ -2,6 +2,7 @@ const primaryNav = document.querySelector(".left");
 const navToggle = document.querySelector(".navButtonToggle");
 const navList = document.querySelectorAll(".display");
 const nameHeader = document.querySelector(".nameHolder");
+const mainName = document.querySelector(".mainName");
 
 const resumeToggle = document.querySelector(".myResume");
 const pdfHolder = document.querySelector(".pdfHolder");
@@ -70,6 +71,21 @@ contactMe.addEventListener('click', () => {
     } else {
         for (var i=0; i < navList.length; i++) {
         navList[i].setAttribute('aria-expanded', false)
+    }
+    }
+})
+
+mainName.addEventListener('click', () => {
+    const active = contactMe.getAttribute('aria-expanded');
+    if (active === "false") {
+        for (var i=0; i < navList.length; i++) {
+            navList[i].setAttribute('aria-expanded', false)
+        }
+        pdfHolder.setAttribute('data-visible', false)
+        resume.setAttribute('data-visible', false)
+    } else {
+        for (var i=0; i < navList.length; i++) {
+            navList[i].setAttribute('aria-expanded', false)
     }
     }
 })
