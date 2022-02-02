@@ -266,7 +266,7 @@ body {
 }
 
 .resumeIcon {
-    background-image: url("/photos/icons/resumeIcon.png");
+    /* background-image: url("/photos/icons/resumeIcon.png"); */
 }
 
 .pdfHolder {
@@ -307,7 +307,7 @@ body {
 }
 
 .contactIcon {
-    background-image: url("/photos/icons/emailIcon.png");
+    /* background-image: url("/photos/icons/emailIcon.png"); */
 
 }
 
