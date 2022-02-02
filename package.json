@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/NCooper00/New-And-Improved-Portfolio/issues"
   },
-  "homepage": "https://github.com/NCooper00/New-And-Improved-Portfolio#readme"
+  "homepage": "https://github.com/NCooper00/New-And-Improved-Portfolio#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "uuid": "^8.3.2"
+  }
 }
