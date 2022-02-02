@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/NCooper00/New-And-Improved-Portfolio#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.0",
+    "path": "^0.12.7",
     "uuid": "^8.3.2"
   }
 }
